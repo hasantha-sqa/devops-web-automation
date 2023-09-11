@@ -9,7 +9,6 @@ import java.io.*;
 import java.util.Objects;
 
 public class JsonDataProvider extends BaseTest {
-
     @DataProvider(name = "Questionnaire")
     public Object[] getTestDate() {
 
@@ -32,8 +31,6 @@ public class JsonDataProvider extends BaseTest {
             data[i] = jsonArray.get(i).getAsJsonObject();
 
         }
-
         return data;
     }
-
 }
