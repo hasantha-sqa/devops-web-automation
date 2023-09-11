@@ -114,78 +114,7 @@ public class SectionDevOpsPractices {
 
     public void selectAnswers(JsonObject devops) {
 
-        Allure.step("Select the Answer for Section - DevOps Practices Question 1");
-        JsonArray q1 = devops.get("q1").getAsJsonArray();
-        for (JsonElement jsonElement : q1) {
-            WebElement webElement = driver.findElement(By.id(jsonElement.getAsString()));
-            DriverUtils.clickElementWithJS(driver, webElement);
-            Assert.assertTrue(webElement.isSelected());
-        }
+        DriverUtils.selectAnswers( driver, devops, "Select the Answer for Section - DevOps Practices Question ");
 
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 2");
-        WebElement q2 = driver.findElement(By.id(devops.get("q2").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q2);
-        Assert.assertTrue(q2.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 3");
-        WebElement q3 = driver.findElement(By.id(devops.get("q3").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q3);
-        Assert.assertTrue(q3.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 4");
-        WebElement q4 = driver.findElement(By.id(devops.get("q4").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q4);
-        Assert.assertTrue(q4.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 5");
-        WebElement q5 = driver.findElement(By.id(devops.get("q5").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q5);
-        Assert.assertTrue(q5.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 6");
-        WebElement q6 = driver.findElement(By.id(devops.get("q6").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q6);
-        Assert.assertTrue(q6.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 7");
-        WebElement q7 = driver.findElement(By.id(devops.get("q7").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q7);
-        Assert.assertTrue(q7.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 8");
-        WebElement q8 = driver.findElement(By.id(devops.get("q8").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q8);
-        Assert.assertTrue(q8.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 9");
-        WebElement q9 = driver.findElement(By.id(devops.get("q9").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q9);
-        Assert.assertTrue(q9.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 10");
-        WebElement q10 = driver.findElement(By.id(devops.get("q10").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q10);
-        Assert.assertTrue(q10.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 11");
-        WebElement q11 = driver.findElement(By.id(devops.get("q11").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q11);
-        Assert.assertTrue(q11.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 12");
-        WebElement q12 = driver.findElement(By.id(devops.get("q12").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q12);
-        Assert.assertTrue(q12.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 13");
-        WebElement q13 = driver.findElement(By.id(devops.get("q13").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q13);
-        Assert.assertTrue(q13.isSelected());
-
-        Allure.step("Select the Answer for Section - DevOps Practices Question 14");
-        WebElement q14 = driver.findElement(By.id(devops.get("q14").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q14);
-        Assert.assertTrue(q14.isSelected());
     }
 }

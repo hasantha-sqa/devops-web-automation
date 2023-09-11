@@ -84,61 +84,7 @@ public class SectionTeamAgility {
 
     public void selectAnswers(JsonObject teamAgility) {
 
-        Allure.step("Select the Answer for Section - Team Agility Question 1");
-        WebElement q1 = driver.findElement(By.id(teamAgility.get("q1").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q1);
-        Assert.assertTrue(q1.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 2");
-        JsonArray q2 = teamAgility.get("q2").getAsJsonArray();
-        for (JsonElement jsonElement : q2) {
-            WebElement webElement = driver.findElement(By.id(jsonElement.getAsString()));
-            DriverUtils.clickElementWithJS(driver, webElement);
-            Assert.assertTrue(webElement.isSelected());
-        }
-
-        Allure.step("Select the Answer for Section - Team Agility Question 3");
-        WebElement q3 = driver.findElement(By.id(teamAgility.get("q3").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q3);
-        Assert.assertTrue(q3.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 4");
-        WebElement q4 = driver.findElement(By.id(teamAgility.get("q4").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q4);
-        Assert.assertTrue(q4.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 5");
-        WebElement q5 = driver.findElement(By.id(teamAgility.get("q5").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q5);
-        Assert.assertTrue(q5.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 6");
-        WebElement q6 = driver.findElement(By.id(teamAgility.get("q6").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q6);
-        Assert.assertTrue(q6.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 7");
-        WebElement q7 = driver.findElement(By.id(teamAgility.get("q7").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q7);
-        Assert.assertTrue(q7.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 8");
-        WebElement q8 = driver.findElement(By.id(teamAgility.get("q8").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q8);
-        Assert.assertTrue(q8.isSelected());
-
-        Allure.step("Select the Answer for Section - Team Agility Question 9");
-        JsonArray q9 = teamAgility.get("q9").getAsJsonArray();
-        for (JsonElement jsonElement : q9) {
-            WebElement webElement = driver.findElement(By.id(jsonElement.getAsString()));
-            DriverUtils.clickElementWithJS(driver, webElement);
-            Assert.assertTrue(webElement.isSelected());
-        }
-
-        Allure.step("Select the Answer for Section - Team Agility Question 10");
-        WebElement q10 = driver.findElement(By.id(teamAgility.get("q10").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q10);
-        Assert.assertTrue(q10.isSelected());
+        DriverUtils.selectAnswers( driver, teamAgility, "Select the Answer for Section - Team Agility Question ");
 
     }
 }

@@ -56,27 +56,7 @@ public class SectionArchitectureAndDesign {
 
     public void selectAnswers(JsonObject archAndDesign) {
 
-        Allure.step("Select the Answer for Section - Architecture And Design Question 1");
-        WebElement q1 = driver.findElement(By.id(archAndDesign.get("q1").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q1);
-        Assert.assertTrue(q1.isSelected());
+        DriverUtils.selectAnswers( driver, archAndDesign, "Select the Answer for Section - Architecture And Design Question ");
 
-        Allure.step("Select the Answer for Section - Architecture And Design Question 2");
-        JsonArray q2 = archAndDesign.get("q2").getAsJsonArray();
-        for (JsonElement jsonElement : q2) {
-            WebElement webElement = driver.findElement(By.id(jsonElement.getAsString()));
-            DriverUtils.clickElementWithJS(driver, webElement);
-            Assert.assertTrue(webElement.isSelected());
-        }
-
-        Allure.step("Select the Answer for Section - Architecture And Design Question 3");
-        WebElement q3 = driver.findElement(By.id(archAndDesign.get("q3").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q3);
-        Assert.assertTrue(q3.isSelected());
-
-        Allure.step("Select the Answer for Section - Architecture And Design Question 4");
-        WebElement q4 = driver.findElement(By.id(archAndDesign.get("q4").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q4);
-        Assert.assertTrue(q4.isSelected());
     }
 }

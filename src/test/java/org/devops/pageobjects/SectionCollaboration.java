@@ -72,45 +72,7 @@ public class SectionCollaboration {
     
     public void selectAnswers(JsonObject collaboration) {
 
-        Allure.step("Select the Answer for Section - Collaboration Question 1");
-        WebElement q1 = driver.findElement(By.id(collaboration.get("q1").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q1);
-        Assert.assertTrue(q1.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 2");
-        WebElement q2 = driver.findElement(By.id(collaboration.get("q2").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q2);
-        Assert.assertTrue(q2.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 3");
-        WebElement q3 = driver.findElement(By.id(collaboration.get("q3").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q3);
-        Assert.assertTrue(q3.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 4");
-        WebElement q4 = driver.findElement(By.id(collaboration.get("q4").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q4);
-        Assert.assertTrue(q4.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 5");
-        WebElement q5 = driver.findElement(By.id(collaboration.get("q5").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q5);
-        Assert.assertTrue(q5.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 6");
-        WebElement q6 = driver.findElement(By.id(collaboration.get("q6").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q6);
-        Assert.assertTrue(q6.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 7");
-        WebElement q7 = driver.findElement(By.id(collaboration.get("q7").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q7);
-        Assert.assertTrue(q7.isSelected());
-
-        Allure.step("Select the Answer for Section - Collaboration Question 8");
-        WebElement q8 = driver.findElement(By.id(collaboration.get("q8").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q8);
-        Assert.assertTrue(q1.isSelected());
+        DriverUtils.selectAnswers( driver, collaboration, "Select the Answer for Section - Collaboration Question ");
 
     }
 }

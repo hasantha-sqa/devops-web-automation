@@ -55,32 +55,7 @@ public class SectionStandardisation {
 
     public void selectAnswers(JsonObject standardisation) {
 
-        Allure.step("Select the Answer for Section - Standardisation Question 1");
-        JsonArray q1 = standardisation.get("q1").getAsJsonArray();
-        for (JsonElement jsonElement : q1) {
-            WebElement webElement = driver.findElement(By.id(jsonElement.getAsString()));
-            DriverUtils.clickElementWithJS(driver, webElement);
-            Assert.assertTrue(webElement.isSelected());
-        }
+        DriverUtils.selectAnswers( driver, standardisation, "Select the Answer for Section - Standardisation Question ");
 
-        Allure.step("Select the Answer for Section - Standardisation Question 2");
-        WebElement q2 = driver.findElement(By.id(standardisation.get("q2").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q2);
-        Assert.assertTrue(q2.isSelected());
-
-        Allure.step("Select the Answer for Section - Standardisation Question 3");
-        WebElement q3 = driver.findElement(By.id(standardisation.get("q3").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q3);
-        Assert.assertTrue(q3.isSelected());
-
-        Allure.step("Select the Answer for Section - Standardisation Question 4");
-        WebElement q4 = driver.findElement(By.id(standardisation.get("q4").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q4);
-        Assert.assertTrue(q4.isSelected());
-
-        Allure.step("Select the Answer for Section - Standardisation Question 5");
-        WebElement q5 = driver.findElement(By.id(standardisation.get("q5").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q5);
-        Assert.assertTrue(q5.isSelected());
     }
 }

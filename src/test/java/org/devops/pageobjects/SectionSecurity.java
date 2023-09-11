@@ -50,28 +50,7 @@ public class SectionSecurity {
 
     public void selectAnswers(JsonObject security) {
 
-        Allure.step("Select the Answer for Section - Security Question 1");
-        WebElement q1 = driver.findElement(By.id(security.get("q1").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q1);
-        Assert.assertTrue(q1.isSelected());
-
-        Allure.step("Select the Answer for Section - Security Question 2");
-        WebElement q2 = driver.findElement(By.id(security.get("q2").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q2);
-        Assert.assertTrue(q2.isSelected());
-
-        Allure.step("Select the Answer for Section - Security Question 3");
-        WebElement q3 = driver.findElement(By.id(security.get("q3").getAsString()));
-        DriverUtils.clickElementWithJS(driver, q3);
-        Assert.assertTrue(q3.isSelected());
-
-        Allure.step("Select the Answer for Section - Security Question 4");
-        JsonArray q4 = security.get("q4").getAsJsonArray();
-        for (JsonElement jsonElement : q4) {
-            WebElement webElement = driver.findElement(By.id(jsonElement.getAsString()));
-            DriverUtils.clickElementWithJS(driver, webElement);
-            Assert.assertTrue(webElement.isSelected());
-        }
+        DriverUtils.selectAnswers( driver, security, "Select the Answer for Section - Security Question ");
 
     }
 }
