@@ -12,32 +12,32 @@ Separate packages maintained to manage classes based on their usage.
 
 ### dataprovider
 Data Provider feature is used to process json files with test data and provide as inputs to the test script.
-<img alt="img_1.png" src="img_1.png"/>
+<img alt="img_1.png" src="readme/img_1.png"/>
 
 ### pageobjects
 pageobjects package is to maintain the classes with Page Object Models of the pages, in the given website.
-<img alt="img_2.png" src="img_2.png"/>
+<img alt="img_2.png" src="readme/img_2.png"/>
 
 ### scenarios
 Test Scenarios which utilizes the POMs are maintained in this package.
-<img alt="img_3.png" src="img_3.png"/>
+<img alt="img_3.png" src="readme/img_3.png"/>
 
 Also, a BaseTest class is used and extended in test classes to initiate the driver and hand the TestNG annotations.
-<img alt="img_4.png" src="img_4.png"/>
+<img alt="img_4.png" src="readme/img_4.png"/>
 
 ### testng
 TestNG xml files for test execution are maintained in this package.
-<img alt="img_5.png" src="img_5.png"/>
+<img alt="img_5.png" src="readme/img_5.png"/>
 
 ### utils
 Classes with other supporting methods are maintained within this package.
 Configs class is used to declare configurations/constants like the URL, etc.
-<img alt="img_6.png" src="img_6.png"/>
+<img alt="img_6.png" src="readme/img_6.png"/>
 
 ### testdata
 Test Data files can be maintained in this directory. 
 A Json file is used here to provide inputs to the different sections of the questionnaire.
-<img alt="img_7.png" src="img_7.png"/>
+<img alt="img_7.png" src="readme/img_7.png"/>
 
 ## UI Testing
 * Web Elements and Operations related each page are maintained in separate classes following the Page Object Model.
