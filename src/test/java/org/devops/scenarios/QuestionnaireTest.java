@@ -1,25 +1,30 @@
 package org.devops.scenarios;
 
 import com.google.gson.JsonObject;
-import io.qameta.allure.Allure;
+import io.qameta.allure.*;
 import org.devops.dataprovider.JsonDataProvider;
+import org.devops.utils.Configs;
 import org.devops.utils.DriverUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Epic("DevOps Maturity Assessment")
+@Feature("Questionnaire")
 public class QuestionnaireTest extends BaseTest {
 
+    @Story("Verify Filling the Questionnaire")
+    @Description("Fill the Questionnaire with Corresponding Inputs")
     @Test(dataProvider = "Questionnaire", dataProviderClass = JsonDataProvider.class)
-    public void zxcTest(JsonObject data) throws IOException {
+    public void fillingQuestionnaireTest(JsonObject data) throws IOException {
 
         Allure.step("Navigate to the URL");
-        driver.get("https://do1assessment-e7b0797b1bea.herokuapp.com/");
+        driver.get(Configs.URL);
         Allure.attachment("AboutPage", DriverUtils.takeScreenshot(driver));
 
         Allure.step("Assert Page Title");
-        Assert.assertEquals(driver.getTitle(), "DevOps Maturity Assessment");
+        Assert.assertEquals(driver.getTitle(), devOpsMaturityAssessment.homePage.pageTitle);
 
         Allure.step("Click Start the Questionnaire Button");
         devOpsMaturityAssessment.aboutPage.buttonStartTheQuestionnaire.click();

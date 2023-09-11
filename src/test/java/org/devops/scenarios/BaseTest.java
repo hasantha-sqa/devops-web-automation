@@ -2,9 +2,7 @@ package org.devops.scenarios;
 
 import io.qameta.allure.Allure;
 import org.devops.pageobjects.DevOpsMaturityAssessment;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -25,6 +23,7 @@ public class BaseTest {
 
         initDriver(browser);
         this.devOpsMaturityAssessment = new DevOpsMaturityAssessment(this.driver);
+
     }
 
     @AfterMethod
@@ -38,19 +37,27 @@ public class BaseTest {
     public void initDriver(String browser) {
 
         switch (browser) {
+
             case "chrome" -> {
+
                 Allure.step("Initialize Chrome Driver");
                 this.driver = new ChromeDriver();
+
             }
             case "firefox" -> {
+
                 Allure.step("Initialize FireFox Driver");
                 this.driver = new FirefoxDriver();
+
             }
             case "edge" -> {
+
                 Allure.step("Initialize Edge Driver");
                 this.driver = new EdgeDriver();
+
             }
             default -> throw new RuntimeException("Unsupported browser: " + browser);
+
         }
 
         driver.manage().window().maximize();

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DevOps Maturity Assessment - Questionnaire">
+    <parameter name="browser" value="firefox"/>
+    <test verbose="2" preserve-order="true"
+          name="Verify Filling the Questionnaire">
+        <classes>
+            <class name="org.devops.scenarios.QuestionnaireTest">
+                <methods>
+                    <include name="fillingQuestionnaireTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
